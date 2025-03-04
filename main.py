@@ -3,7 +3,6 @@ def deep_recursive_find_map(target:any,structure:any) -> list:
         return []
         
     if isinstance(structure,list):
-    
         for i,s in enumerate(structure):
             if target == s:
                 return [i]
@@ -14,7 +13,7 @@ def deep_recursive_find_map(target:any,structure:any) -> list:
 
     if isinstance(structure,dict):
             for k,v in structure.items():
-                if v == target : 
+                if v == target: 
                    return [k]
                 if isinstance(v,(dict,list)):
                     result = deep_recursive_find_map(target,v)
